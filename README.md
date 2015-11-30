@@ -113,7 +113,7 @@ pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_subread:m
 
 ## Advanced Analysis Options
 
-## SMRTLink Resequencing Options
+## SMRTLink/pbsmrtpipe Resequencing Options
 
 You may modify advanced analysis parameters for Resequencing as described below via SMRTLink.
 
