@@ -16,8 +16,8 @@ Table of contents
     * [GenomicConsensus Options](#genomicconsensus-options)
     * [pbsmrtpipe Resequencing Options](#pbsmrtpipe-resequencing-options)
   * [Output Files](#output-files)
-    * [PBAlign Output Files](#classify-output-files)
-    * [GenomicConsensus Output Files](#cluster-output-files)
+    * [PBAlign Output Files](#pbalign-output-files)
+    * [GenomicConsensus Output Files](#genomicconsensus-output-files)
   * [Algorithm Modules](#algorithm-modules)
   * [Glossary](#glossary)
 
