@@ -1,4 +1,4 @@
-# Resequencing-3.0
+# Resequencing: 
 
 TODO: Introductory Description
 
