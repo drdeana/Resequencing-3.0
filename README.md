@@ -14,9 +14,39 @@ Table of contents
     * [SMRTLink IsoSeq Options](#smrtlink-isoseq-options)
     * [PBAlign Options](#pbalign-options)
     * [GenomicConsensus Options](#genomicconsensus-options)
-    * [pbsmrtpipe IsoSeq Options](#pbsmrtpipe-isoseq-options)
+    * [pbsmrtpipe Resequencing Options](#pbsmrtpipe-resequencing-options)
   * [Output Files](#output-files)
     * [PBAlign Output Files](#classify-output-files)
     * [GenomicConsensus Output Files](#cluster-output-files)
   * [Algorithm Modules](#algorithm-modules)
   * [Glossary](#glossary)
+
+## Overview
+
+##Manual
+
+##Running with SMRTAnalysis
+
+##Running on the Command Line
+
+##Running on the Command-Line with pbsmrtpipe
+
+## Advanced Analysis Options
+
+## SMRTLink IsoSeq Options
+
+## PBAlign Options
+
+## GenomicConsensus Options
+
+## pbsmrtpipe Resequencing Options
+
+## Output Files
+## PBAlign Output Files
+
+##GenomicConsensus Output Files
+
+## Algorithm Modules
+
+## Glossary
+
