@@ -27,7 +27,7 @@ Table of contents
 
 
 ##Manual
-There are three ways to run Resequencing: Using SMRTLink, on the command-line, and on the command-line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
+There are three ways to run Resequencing: Using SMRTLink, on the command line, and on the command line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
 
 ##Running with SMRTLink
 
