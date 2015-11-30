@@ -40,6 +40,26 @@ To run Isoseq using SMRTLink, follow the usual steps for analysing data on SMRTL
 
 ##Running on the Command Line
 
+On the command line, the analysis is performed in 2 steps:
+
+1. Align sequences in your FASTA or BAM to a reference using PBAlign, generating an aligned BAM.
+2. Call variants from your aligned BAM using variantCaller (Genomic Consensus)
+
+__Step 1. PBAlign__
+
+First, align your sequences to your chosen reference.
+
+     pbalign --concordant --hitpolicy=randombest --minAccuracy 70 --minLength 50 --algorithmOptions="-minMatch 12 -bestn 10 -minPctIdentity 70.0" subreads.bam reference.fasta aligned_subreads.bam
+
+Where your reference sequence is in reference.fasta, your unaligned reads are in subreads.bam, and the file to store your aligned reads is aligned_subreads.bam
+
+__Step 2. GenomicConsensus__
+
+Next, call variants from the aligned BAM using variantCaller.
+
+     variantCaller --algorithm=quiver aligned_subreads.bam -r reference.fasta --diploid=false --minConfidence=40 --minCoverage=5 aligned_subreads.bam -o variants.gff -o consensus.fasta.gz -o consesus.fastq
+
+
 ##Running on the Command-Line with pbsmrtpipe
 ###Install pbsmrtpipe
 pbsmrtpipe is a part of `smrtanalysis-3.0` package and will be installed
