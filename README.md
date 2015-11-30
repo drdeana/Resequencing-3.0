@@ -23,6 +23,9 @@ Table of contents
 
 ## Overview
 
+![resequencing](https://cloud.githubusercontent.com/assets/12494820/11485866/7cd26f12-976a-11e5-8a22-fc76d70507b7.png)
+
+
 ##Manual
 
 ##Running with SMRTAnalysis
