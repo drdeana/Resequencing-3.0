@@ -42,7 +42,7 @@ To run Isoseq using SMRTLink, follow the usual steps for analysing data on SMRTL
 
 On the command line, the analysis is performed in 2 steps:
 
-1. Align sequences in your FASTA or BAM to a reference using PBAlign, generating an aligned BAM.
+1. Align sequences in your FASTA, BAM, or XML to a reference using PBAlign, generating an aligned BAM.
 2. Call variants from your aligned BAM using variantCaller (Genomic Consensus)
 
 __Step 1. PBAlign__
