@@ -38,6 +38,12 @@ Table of contents
 
 ## SMRTLink Resequencing Options
 
+You may modify advanced analysis parameters for Resequencing as described below via SMRTLink.
+
+| Module |           Parameter           |     Default      |  Explanation      |
+| ------ | -------------------------- | --------------------------- | ----------------- |
+| ? | Algorithm Name  | quiver  | Specifies the algorithm to be used by GenomicConsenus. Options are "quiver" and "plurality" |
+
 ## PBAlign Options
 
 ## GenomicConsensus Options
