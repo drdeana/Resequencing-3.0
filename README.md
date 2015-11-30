@@ -25,9 +25,14 @@ Table of contents
 
 ![resequencing](https://cloud.githubusercontent.com/assets/12494820/11485866/7cd26f12-976a-11e5-8a22-fc76d70507b7.png)
 
+Analyses are performed in two stages: PBAlign, and GenomicConsensus. 
 
 ##Manual
 There are three ways to run Resequencing: Using SMRTLink, on the command line, and on the command line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
+* __PBAlign__
+  * TODO
+* __GenomicConensus__
+  * TODO
 
 ##Running with SMRTLink
 
