@@ -11,7 +11,7 @@ Table of contents
     * [Running on the Command-Line](#running-on-the-command-line)
     * [Running on the Command-Line with pbsmrtpipe](#running-on-the-command-line-with-pbsmrtpipe)
   * [Advanced Analysis Options](#advanced-analysis-options)
-    * [SMRTLink/pbsmrtpipe Resequencing Options](#smrtlink-resequencing-options)
+    * [SMRTLink/pbsmrtpipe Resequencing Options](#smrtlinkpbsmrtpipe-resequencing-options)
     * [PBAlign Options](#pbalign-options)
     * [GenomicConsensus Options](#genomicconsensus-options)
   * [Output Files](#output-files)
