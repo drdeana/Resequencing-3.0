@@ -62,6 +62,7 @@ Next, call variants from the aligned BAM using variantCaller.
 Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. 
 
 ##Running on the Command-Line with pbsmrtpipe
+
 ###Install pbsmrtpipe
 pbsmrtpipe is a part of `smrtanalysis-3.0` package and will be installed
 if `smrtanalysis-3.0` has been installed on your system. Or you can [download   pbsmrtpipe](https://github.com/PacificBiosciences/pbsmrtpipe) and [install](http://pbsmrtpipe.readthedocs.org/en/master/).
@@ -69,6 +70,46 @@ if `smrtanalysis-3.0` has been installed on your system. Or you can [download   
 You can verify that pbsmrtpipe is running OK by:
 
     pbsmrtpipe --help
+
+### Create a dataset
+Now create an XML file from your subreads.
+
+```
+dataset create --type SubreadSet my.subreadset.xml subreads1.bam subreads2.bam ...
+```
+This will create a file called `my.subreadset.xml`. 
+
+
+### Create and edit resequencing options and global options for `pbsmrtpipe`.
+Create a global options XML file which contains SGE related, job chunking and
+job distribution options that you may modify by:
+
+```
+ pbsmrtpipe show-workflow-options -o global_options.xml
+```
+
+Create a resequencing options XML file which contains resequencing-related options that 
+you may modify by:
+```
+ pbsmrtpipe show-template-details pbsmrtpipe.pipelines.sa3_ds_resequencing -o isoseq_options.xml
+```
+
+The entries in the options XML files have the format:
+
+```
+ <option id="pbtranscript.task_options.min_seq_len">
+            <value>300</value>
+        </option>
+```
+
+And you can modify options using your favorite text editor, such as vim.
+
+### Run Resequencing from pbsmrtpipe
+Once you have set your options, you are ready to run resequencing via pbsmrtpipe:
+
+```
+pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_subread:my.subreadset.xml --preset-xml=isoseq_options.xml --preset-xml=global_options.xml
+```
 
 
 ## Advanced Analysis Options
