@@ -7,7 +7,7 @@ Table of contents
 
   * [Overview](#overview)
   * [Manual](#manual)
-    * [Running with SMRTAnalysis](#running-with-smrtanalysis)
+    * [Running with SMRTLink](#running-with-smrtanalysis)
     * [Running on the Command-Line](#running-on-the-command-line)
     * [Running on the Command-Line with pbsmrtpipe](#running-on-the-command-line-with-pbsmrtpipe)
   * [Advanced Analysis Options](#advanced-analysis-options)
@@ -27,8 +27,11 @@ Table of contents
 
 
 ##Manual
+There are three ways to run Resequencing: Using SMRTLink, on the command-line, and on the command-line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
 
-##Running with SMRTAnalysis
+##Running with SMRTLink
+
+To run Isoseq using SMRTLink, follow the usual steps for analysing data on SMRTLink. TODO: Link to document explaining SMRTLink.
 
 ##Running on the Command Line
 
