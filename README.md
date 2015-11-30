@@ -11,7 +11,7 @@ Table of contents
     * [Running on the Command-Line](#running-on-the-command-line)
     * [Running on the Command-Line with pbsmrtpipe](#running-on-the-command-line-with-pbsmrtpipe)
   * [Advanced Analysis Options](#advanced-analysis-options)
-    * [SMRTLink IsoSeq Options](#smrtlink-isoseq-options)
+    * [SMRTLink IsoSeq Options](#smrtlink-resequencing-options)
     * [PBAlign Options](#pbalign-options)
     * [GenomicConsensus Options](#genomicconsensus-options)
     * [pbsmrtpipe Resequencing Options](#pbsmrtpipe-resequencing-options)
@@ -33,7 +33,7 @@ Table of contents
 
 ## Advanced Analysis Options
 
-## SMRTLink IsoSeq Options
+## SMRTLink Resequencing Options
 
 ## PBAlign Options
 
