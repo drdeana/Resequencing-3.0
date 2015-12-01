@@ -160,8 +160,13 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | alignment | Help | --concordant | Map subreads of a ZMW to the same genomic location. |
 | alignment | Help | --nproc NPROC | Number of threads. Default value is 8. |
 | alignment | Help | --algorithmOptions ALGORITHMOPTIONS | Pass alignment options through. |
+| filter criteria | Help | --maxDivergence MAXDIVERGENCE | The maximum allowed percentage divergence of a read from the reference sequence. Default value is 30.0. |
+| filter criteria | Help | --minAccuracy MINACCURACY | The minimum percentage accuracy of alignments that will be evaluated. Default value is 70.0. |
+| filter criteria | Help | --minLength MINLENGTH | The minimum aligned read length of alignments that will be evaluated. Default value is 50. |
+| filter criteria | Help | --scoreCutoff SCORECUTOFF | The worst score to output an alignment. |
+| filter criteria | Help | --hitPolicy {randombest, allbest, random, all, leftmost} | Specify a policy for how to treat multiple hit random: selects a random hit. all: selects all hits. allbest: selects all the best score hits. randombest: selects a random hit from all best score hits. leftmost: selects a hit which has the best score and the smallest mapping coordinate in any reference. Default value is randombest. |
+| filter criteria | Help | --filterAdapterOnly |  If specified, do not report adapter-only hits using annotations with the reference entry. |
 | optional | Help |  -h, --help | show this help message and exit |
-
 
 
 ## variantCaller Options
