@@ -135,6 +135,13 @@ You may modify advanced analysis parameters for Resequencing as described below 
 ## PBAlign Options
 
 ## variantCaller Options
+In order to show variantCaller advanced options via command line: `variantCaller --help`.
+
+| Type  |  Parameter          |     Example      |  Explanation      |
+| ----- | ------------------ | ---------------- | ----------------- |
+| optional | Help |  -h, --help | This prints the help message |
+
+
 
 ## Output Files
 ## PBAlign Output Files
