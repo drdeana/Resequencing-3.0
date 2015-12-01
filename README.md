@@ -207,19 +207,19 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | Verbosity and debugging/profiling | Dump Evidence | --dumpEvidence [{variants,all}], -d [{variants,all}] | No Description (greg) |
 | Verbosity and debugging/profiling | Evidence Directory | --evidenceDirectory EVIDENCEDIRECTORY | No Description (greg) |
 | Verbosity and debugging/profiling | Annotate GFF | --annotateGFF | Augment GFF variant records with additional information (default: False) |
-| Advanced configuration | Help | --diploid | Enable detection of heterozygous variants (experimental) (default: False) |
-| Advanced configuration | Help | --queueSize QUEUESIZE, -Q QUEUESIZE | No Description (greg) |
-| Advanced configuration | Help | --threaded, -T | Run threads instead of processes (for debugging purposes only) (default: False) |
-| Advanced configuration | Help | --referenceChunkSize REFERENCECHUNKSIZE, -C REFERENCECHUNKSIZE | No Description (greg) |
-| Advanced configuration | Help | --fancyChunking | Adaptive reference chunking designed to handle coverage cutouts better (default: True) |
-| Advanced configuration | Help | --simpleChunking | Disable adaptive reference chunking (default: True) |
-| Advanced configuration | Help | --referenceChunkOverlap REFERENCECHUNKOVERLAP | No Description (greg) |
-| Advanced configuration | Help | --autoDisableHdf5ChunkCache AUTODISABLEHDF5CHUNKCACHE | Disable the HDF5 chunk cache when the number of datasets in the cmp.h5 exceeds the given threshold (default: 500) |
-| Advanced configuration | Help | --aligner {affine,simple}, -a {affine,simple} | The pairwise alignment algorithm that will be used to produce variant calls from the consensus (Quiver only). (default: affine) |
-| Advanced configuration | Help | --refineDinucleotideRepeats | Require quiver maximum likelihood search to try one less/more repeat copy in dinucleotide repeats, which seem to be the most frequent cause of suboptimal convergence (getting trapped in local optimum) (Quiver only) (default: True) |
-| Advanced configuration | Help | --noRefineDinucleotideRepeats | Disable dinucleotide refinement (default: True) |
-| Advanced configuration | Help | --fast | Cut some corners to run faster. Unsupported! (default: False) |
-| Advanced configuration | Help | --skipUnrecognizedContigs | Do not abort when told to process a reference window (via -w/--referenceWindow[s]) that has no aligned coverage. Outputs emptyish files if there are no remaining non-degenerate windows. Only intended for use by smrtpipe scatter/gather. (default: False) |
+| Advanced configuration | Diploid | diploid | Enable detection of heterozygous variants (experimental) (default: False) |
+| Advanced configuration | Queue Size | --queueSize QUEUESIZE, -Q QUEUESIZE | No Description (greg) |
+| Advanced configuration | Thread | --threaded, -T | Run threads instead of processes (for debugging purposes only) (default: False) |
+| Advanced configuration | Reference Chunk Size | --referenceChunkSize REFERENCECHUNKSIZE, -C REFERENCECHUNKSIZE | No Description (greg) |
+| Advanced configuration | Fancy Chunking | --fancyChunking | Adaptive reference chunking designed to handle coverage cutouts better (default: True) |
+| Advanced configuration | Simple Chunking | --simpleChunking | Disable adaptive reference chunking (default: True) |
+| Advanced configuration | Reference Chunk Overlap | --referenceChunkOverlap REFERENCECHUNKOVERLAP | No Description (greg) |
+| Advanced configuration | Auto-Disable Hdf5 Chunk Cache | --autoDisableHdf5ChunkCache AUTODISABLEHDF5CHUNKCACHE | Disable the HDF5 chunk cache when the number of datasets in the cmp.h5 exceeds the given threshold (default: 500) |
+| Advanced configuration | Aligner | --aligner {affine,simple}, -a {affine,simple} | The pairwise alignment algorithm that will be used to produce variant calls from the consensus (Quiver only). (default: affine) |
+| Advanced configuration | Refine Dinucleotide Repeats | --refineDinucleotideRepeats | Require quiver maximum likelihood search to try one less/more repeat copy in dinucleotide repeats, which seem to be the most frequent cause of suboptimal convergence (getting trapped in local optimum) (Quiver only) (default: True) |
+| Advanced configuration | No Refine Dinucleotide Repeats | --noRefineDinucleotideRepeats | Disable dinucleotide refinement (default: True) |
+| Advanced configuration | Fast | --fast | Cut some corners to run faster. Unsupported! (default: False) |
+| Advanced configuration | Skip Unrecognized Contigs | --skipUnrecognizedContigs | Do not abort when told to process a reference window (via -w/--referenceWindow[s]) that has no aligned coverage. Outputs emptyish files if there are no remaining non-degenerate windows. Only intended for use by smrtpipe scatter/gather. (default: False) |
 
 ## Output Files
 ## PBAlign Output Files
