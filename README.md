@@ -136,14 +136,16 @@ You may modify advanced analysis parameters for Resequencing as described below 
 
 ## GenomicConsensus Options
 
-## pbsmrtpipe Resequencing Options
-
 ## Output Files
 ## PBAlign Output Files
 
 ##GenomicConsensus Output Files
 
 ## Algorithm Modules
+
+__PBAlign__
+
+__GenomicConsensus__
 
 ## Glossary
 
