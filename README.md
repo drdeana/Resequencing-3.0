@@ -241,15 +241,10 @@ __Region Table?__
 __Variant Callset (variants.gff)__
 
 The variant callset will follow standard gff format with a header and the columns:
-* Contig Name
-* "."
-* Variant Type
-* Start Position
-* End Position
-* "."
-* "."
-* "."
-* Info Column
+
+```
+Contig_Name   .   Variant_Type   Start_Position   End_Position   .   .   .   Info_Column
+```
 
 The default information in the Info column is:
 * Reference Sequence
