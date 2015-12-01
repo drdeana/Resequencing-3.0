@@ -26,7 +26,12 @@ Table of contents
 
 Analyses are performed in two stages: PBAlign, and GenomicConsensus. 
 * __PBAlign__
-  * TODO
+  * Mapping PacBio sequences to references using an algorithm selected from a
+selection of supported command-line alignment algorithms. Input can be a
+fasta, pls.h5, bas.h5 or ccs.h5 file or a fofn (file of file names). Output
+can be in CMP.H5, SAM or BAM format. If output is BAM format, aligner can
+only be blasr and QVs will be loaded automatically.
+
 * __GenomicConensus__
   * TODO
 
@@ -133,6 +138,14 @@ You may modify advanced analysis parameters for Resequencing as described below 
 
 
 ## PBAlign Options
+
+| Type  |  Parameter          |     Example      |  Explanation      |
+| ----- | ------------------ | ---------------- | ----------------- |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+
+
 
 ## variantCaller Options
 In order to show variantCaller advanced options via command line: `variantCaller --help`.
