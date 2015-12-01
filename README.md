@@ -61,7 +61,7 @@ __Step 2. GenomicConsensus__
 
 Next, call variants from the aligned BAM using variantCaller.
 
-     variantCaller --algorithm=quiver  -r reference.fasta --diploid=false --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consesus.fastq aligned_subreads.bam
+     variantCaller --algorithm=quiver  -r reference.fasta --diploid=false --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consensus.fastq aligned_subreads.bam
 
 Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. 
 
@@ -141,10 +141,15 @@ You may modify advanced analysis parameters for Resequencing as described below 
 
 | Type  |  Parameter          |     Example      |  Explanation      |
 | ----- | ------------------ | ---------------- | ----------------- |
+| positional | Input File |  unaligned.bam | SubreadSet or unaligned .bam |
+| positional | Reference File |  reference.fasta | Reference DataSet or FASTA file |
+| positional | Output File |  aligned.bam | Output AlignmentSet file |
+| optional | Help | -h, --help | show this help message and exit |
+| optional | Version | -v, --version | show program's version number and exit |
+| optional | Verbose | --verbose | No Description (greg) |
+| optional | Debug | --debug | Writes the debug reporting to stdout |
+| optional | Profile | --profile | Print runtime profile at exit |
 | optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-
 
 
 ## variantCaller Options
