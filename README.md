@@ -224,7 +224,28 @@ In order to show variantCaller advanced options via command line: `variantCaller
 ##Files
 ## PBAlign Files
 
+__Configuration File__
+(greg)
+
+__Pulse File__
+(greg)
+
+__AlignmentSeq File__
+(greg)
+
+__Region Table?__
+(greg)
+
 ##GenomicConsensus Files
+
+__Reference Windows File__
+(greg)
+
+__Parameters File__
+(greg)
+
+__Annotated GFF__
+(greg)
 
 ## Algorithm Modules
 
