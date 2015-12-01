@@ -229,11 +229,28 @@ In order to show variantCaller advanced options via command line: `variantCaller
 ## Algorithm Modules
 
 __BLASR__
-
+(greg)
+__Bowtie__
+(greg)
 __GenomicConsensus__
+(greg)
+__GMAP__
+(greg)
+
 
 ## Glossary
-
-## Glossary
-* __MapQV__
+* __Chunk Cache?__
   * (greg)
+* __Confidence (variant call)__
+  * (greg)
+* __Dinucleotide repeat (how many repeats before it's a repeat, should this be defined?)__
+  * (greg)
+* __MapQV, DeletionQV, etc?__
+  * (greg)
+* __Pulse Metric__
+  * (greg)
+* __Region Table__
+  * (greg)
+* __Score__
+  * (greg)
+ 
