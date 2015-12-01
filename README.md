@@ -259,7 +259,12 @@ __Parameters File__
 (greg)
 
 __Annotated GFF__
-(greg)
+
+An annotated GFF will have the same format as the default gff, but with extra info fields. These optional fields are:
+* ?
+* ?
+* ?
+* (greg)
 
 ## Algorithm Modules
 
