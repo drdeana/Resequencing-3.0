@@ -166,8 +166,12 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | filter criteria | Help | --scoreCutoff SCORECUTOFF | The worst score to output an alignment. |
 | filter criteria | Help | --hitPolicy {randombest, allbest, random, all, leftmost} | Specify a policy for how to treat multiple hit random: selects a random hit. all: selects all hits. allbest: selects all the best score hits. randombest: selects a random hit from all best score hits. leftmost: selects a hit which has the best score and the smallest mapping coordinate in any reference. Default value is randombest. |
 | filter criteria | Help | --filterAdapterOnly |  If specified, do not report adapter-only hits using annotations with the reference entry. |
-| optional | Help |  -h, --help | show this help message and exit |
-
+| for cmp.h5 | Help | --forQuiver | The output cmp.h5 file which will be sorted, loaded with pulse QV information, and repacked, so that it can be consumed by quiver directly. This requires the input file to be in PacBio bas/pls.h5 format, and --useccs must be None. Default value is False. |
+| for cmp.h5 | Help | --loadQVs | Similar to --forQuiver, the only difference is that --useccs can be specified. Default value is False. |
+| for cmp.h5 | Help | --byread | Load pulse information using -byread option instead of -bymetric. Only works when --forQuiver or --loadQVs are set. Default value is False. |
+| for cmp.h5 | Help | --metrics METRICS | Load the specified (comma-delimited list of) metrics instead of the default metrics required by quiver. This option only works when --forQuiver  or --loadQVs are set. Default: DeletionQV, DeletionTag, InsertionQV, MergeQV, SubstitutionQV |
+| miscellaneous | Help | --seed SEED | Initialize the random number generator with a none-zero integer. Zero means that current system time is used. Default value is 1. |
+| miscellaneous | Help | --tmpDir TMPDIR | Specify a directory for saving temporary files. Default is /scratch. |
 
 ## variantCaller Options
 In order to show variantCaller advanced options via command line: `variantCaller --help`.
