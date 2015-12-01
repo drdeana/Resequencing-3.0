@@ -162,12 +162,12 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | algorithm and parameter settings | Algorithm |  --algorithm ALGORITHM | No Description (greg) |
 | algorithm and parameter settings | Quiver Parameter File | --parametersFile PARAMETERSFILE, -P PARAMETERSFILE |  Parameter set filename (QuiverParameters.ini), or directory D such that either  D/*/GenomicConsensus/QuiverParameters.ini, or D/GenomicConsensus/QuiverParameters.ini, is found. In the former case, the lexically largest path is chosen. (default: None) |
 | algorithm and parameter settings | Parameter Specs | --parametersSpec PARAMETERSSPEC, -p PARAMETERSSPEC | Name of parameter set (chemistry.model) to select from the parameters file, or just the name of the chemistry, in which case the best available model is chosen. Default is 'auto', which selects the best parameter set from the cmp.h5 (default: auto) |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
+| Verbosity and debugging/profiling | Verbosity Level | --verbose | Set the verbosity level. (default: None) (greg)|
+| Verbosity and debugging/profiling | Quiet | --quiet | Turn off all logging, including warnings (default:False) |
+| Verbosity and debugging/profiling | Profile | --profile | Enable Python-level profiling (using cProfile).(default: False) |
+| Verbosity and debugging/profiling | Dump Evidence | --dumpEvidence [{variants,all}], -d [{variants,all}] | No Description (greg) |
+| Verbosity and debugging/profiling | Evidence Directory | --evidenceDirectory EVIDENCEDIRECTORY | No Description (greg) |
+| Verbosity and debugging/profiling | Annotate GFF | --annotateGFF | Augment GFF variant records with additional information (default: False) |
 | optional | Help |  -h, --help | show this help message and exit |
 
 
