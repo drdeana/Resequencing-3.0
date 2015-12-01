@@ -14,9 +14,9 @@ Table of contents
     * [SMRTLink/pbsmrtpipe Resequencing Options](#smrtlinkpbsmrtpipe-resequencing-options)
     * [PBAlign Options](#pbalign-options)
     * [variantCaller Options](#variantcaller-options)
-  * [Output Files](#output-files)
-    * [PBAlign Output Files](#pbalign-output-files)
-    * [GenomicConsensus Output Files](#genomicconsensus-output-files)
+  * [Files](#files)
+    * [PBAlign Files](#pbalign-files)
+    * [GenomicConsensus Files](#genomicconsensus-files)
   * [Algorithm Modules](#algorithm-modules)
   * [Glossary](#glossary)
 
@@ -221,10 +221,10 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | Advanced configuration | Fast | --fast | Cut some corners to run faster. Unsupported! (default: False) |
 | Advanced configuration | Skip Unrecognized Contigs | --skipUnrecognizedContigs | Do not abort when told to process a reference window (via -w/--referenceWindow[s]) that has no aligned coverage. Outputs emptyish files if there are no remaining non-degenerate windows. Only intended for use by smrtpipe scatter/gather. (default: False) |
 
-## Output Files
-## PBAlign Output Files
+##Files
+## PBAlign Files
 
-##GenomicConsensus Output Files
+##GenomicConsensus Files
 
 ## Algorithm Modules
 
