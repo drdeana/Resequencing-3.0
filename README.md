@@ -16,7 +16,7 @@ Table of contents
     * [variantCaller Options](#variantcaller-options)
   * [Files](#files)
     * [PBAlign Files](#pbalign-files)
-    * [GenomicConsensus Files](#genomicconsensus-files)
+    * [variantCaller Files](#variantcaller-files)
   * [Algorithm Modules](#algorithm-modules)
   * [Glossary](#glossary)
 
@@ -236,7 +236,26 @@ __AlignmentSeq File__
 __Region Table?__
 (greg)
 
-##GenomicConsensus Files
+##variantCaller Files
+
+__Variant Callset (variants.gff)__
+
+The variant callset will follow standard gff format with a header and the columns:
+* Contig Name
+* "."
+* Variant Type
+* Start Position
+* End Position
+* "."
+* "."
+* "."
+* Info Column
+
+The default information in the Info column is:
+* Reference Sequence
+* Alternate Sequence
+* Coverage
+* Confidence
 
 __Reference Windows File__
 (greg)
