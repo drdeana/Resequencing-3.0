@@ -159,6 +159,15 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | read selection/filtering | Reference Window File |  --referenceWindowsFile REFERENCEWINDOWSASSTRING, -W REFERENCEWINDOWSASSTRING |  A file containing reference window designations, one per line (default: None) |
 | read selection/filtering | Barcode | --barcode _BARCODE | Only process reads with the given barcode name. (default: None) |
 | read selection/filtering | Read Strata | --readStratum READSTRATUM |  A string of the form 'n/N', where n, and N are integers, 0 <= n < N, designating that the reads are to be deterministically split into N strata of roughly even size, and stratum n is to be used for variant and consensus calling. This is mostly useful for Quiver development. (default: None) |
+| algorithm and parameter settings | Algorithm |  --algorithm ALGORITHM | No Description (greg) |
+| algorithm and parameter settings | Quiver Parameter File | --parametersFile PARAMETERSFILE, -P PARAMETERSFILE |  Parameter set filename (QuiverParameters.ini), or directory D such that either  D/*/GenomicConsensus/QuiverParameters.ini, or D/GenomicConsensus/QuiverParameters.ini, is found. In the former case, the lexically largest path is chosen. (default: None) |
+| algorithm and parameter settings | Parameter Specs | --parametersSpec PARAMETERSSPEC, -p PARAMETERSSPEC | Name of parameter set (chemistry.model) to select from the parameters file, or just the name of the chemistry, in which case the best available model is chosen. Default is 'auto', which selects the best parameter set from the cmp.h5 (default: auto) |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
 | optional | Help |  -h, --help | show this help message and exit |
 
 
