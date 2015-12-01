@@ -229,15 +229,19 @@ In order to show variantCaller advanced options via command line: `variantCaller
 ## Algorithm Modules
 
 __BLASR__
+
 (greg)
 
 __Bowtie__
+
 (greg)
 
 __GenomicConsensus__
+
 (greg)
 
 __GMAP__
+
 (greg)
 
 
