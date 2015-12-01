@@ -61,7 +61,7 @@ __Step 2. variantCaller__
 
 Next, call variants from the aligned BAM using variantCaller.
 
-     variantCaller --algorithm=quiver  -r reference.fasta --diploid=false --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consensus.fastq aligned_subreads.bam
+     variantCaller --algorithm=quiver  -r reference.fasta --diploid --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consensus.fastq aligned_subreads.bam
 
 Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. 
 
