@@ -22,18 +22,18 @@ Table of contents
 
 ## Overview
 
-![resequencing](https://cloud.githubusercontent.com/assets/12494820/11485866/7cd26f12-976a-11e5-8a22-fc76d70507b7.png)
+![resequencing](https://cloud.githubusercontent.com/assets/12494820/11510246/9665ec1c-9817-11e5-99fb-d15e325b4351.png)
 
-Analyses are performed in two stages: PBAlign, and GenomicConsensus. 
+Analyses are performed in two stages: PBAlign, and variantCaller. 
 * __PBAlign__
-  * Mapping PacBio sequences to references using an algorithm selected from a
+  * PBAlign maps PacBio sequences to references using an algorithm selected from a
 selection of supported command-line alignment algorithms. Input can be a
 fasta, pls.h5, bas.h5 or ccs.h5 file or a fofn (file of file names). Output
 can be in CMP.H5, SAM or BAM format. If output is BAM format, aligner can
 only be blasr and QVs will be loaded automatically.
 
-* __GenomicConensus__
-  * TODO
+* __variantCaller__
+  * variantCaller uses a user-specified algorithm from the GenomicConsensus tool to construct consensus sequences and a set of variants. 
 
 ##Manual
 There are three ways to run Resequencing: Using SMRTLink, on the command line, and on the command line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
@@ -228,7 +228,7 @@ In order to show variantCaller advanced options via command line: `variantCaller
 
 ## Algorithm Modules
 
-__PBAlign__
+__BLASR__
 
 __GenomicConsensus__
 
