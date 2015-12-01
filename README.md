@@ -149,7 +149,11 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | optional | Verbose | --verbose | No Description (greg) |
 | optional | Debug | --debug | Writes the debug reporting to stdout |
 | optional | Profile | --profile | Print runtime profile at exit |
+| optional input | Region Table | --regionTable REGIONTABLE | Specify a region table for filtering reads. |
+| optional input | Configuration File | --configFile CONFIGFILE | Specify a set of user-defined argument values. |
+| optional input | Pulse File | --pulseFile PULSEFILE | When input reads are in fasta format and output is a cmp.h5 this option can specify pls.h5 or bas.h5 or FOFN files from which pulse metrics can be loaded for Quiver. |
 | optional | Help |  -h, --help | show this help message and exit |
+
 
 
 ## variantCaller Options
