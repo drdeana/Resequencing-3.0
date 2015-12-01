@@ -238,12 +238,15 @@ __Bowtie__
 
 __GenomicConsensus__
 
-(greg)
+(dave/lance/nigel)
 
 __GMAP__
 
 (greg)
 
+__PBAlign__
+
+(yli)
 
 ## Glossary
 * __Chunk Cache?__
