@@ -13,7 +13,7 @@ Table of contents
   * [Advanced Analysis Options](#advanced-analysis-options)
     * [SMRTLink/pbsmrtpipe Resequencing Options](#smrtlinkpbsmrtpipe-resequencing-options)
     * [PBAlign Options](#pbalign-options)
-    * [GenomicConsensus Options](#genomicconsensus-options)
+    * [variantCaller Options](#variantcaller-options)
   * [Output Files](#output-files)
     * [PBAlign Output Files](#pbalign-output-files)
     * [GenomicConsensus Output Files](#genomicconsensus-output-files)
@@ -134,7 +134,7 @@ You may modify advanced analysis parameters for Resequencing as described below 
 
 ## PBAlign Options
 
-## GenomicConsensus Options
+## variantCaller Options
 
 ## Output Files
 ## PBAlign Output Files
