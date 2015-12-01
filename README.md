@@ -148,9 +148,13 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | basic required | Input File |  inputFilename |  The input FASTA/BAM/XML file (revised) |
 | basic required | Reference File |   --referenceFilename REFERENCEFILENAME, --reference REFERENCEFILENAME, -r REFERENCEFILENAME | The filename of the reference FASTA file (default:None) |
 | basic required | Output File |   -o OUTPUTFILENAMES, --outputFilename OUTPUTFILENAMES |  The output filename(s), as a comma-separated list.Valid output formats are .fa/.fasta, .fq/.fastq,.gff (default: []) |
-| optional | Help |  -h, --help | This prints the help message |
-
-
+| parallelism | Number of Jobs |  -j NUMWORKERS, --numWorkers NUMWORKERS | The number of worker processes to be used (default: 1) |
+| output filtering | Minimum Confidence | --minConfidence MINCONFIDENCE, -q MINCONFIDENCE |  The minimum confidence for a variant call to be output to variants.gff (default: 40) |
+| output filtering | Minimum Coverage | --minCoverage MINCOVERAGE, -x MINCOVERAGE | The minimum site coverage that must be achieved for variant calls and consensus to be calculated for a site. (default: 5) |
+| output filtering | Help | --noEvidenceConsensusCall {nocall,reference,lowercasereference} | The consensus base that will be output for sites with no effective coverage. (default: lowercasereference) |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
+| optional | Help |  -h, --help | show this help message and exit |
 
 ## Output Files
 ## PBAlign Output Files
