@@ -55,7 +55,7 @@ First, align your sequences to your chosen reference.
 
      pbalign --concordant --hitPolicy=randombest --minAccuracy 70 --minLength 50 --algorithmOptions="-minMatch 12 -bestn 10 -minPctIdentity 70.0" subreads.bam reference.fasta aligned_subreads.bam
 
-Where your reference sequence is in reference.fasta, your unaligned reads are in subreads.bam, and the file to store your aligned reads is aligned_subreads.bam. Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
+Where your reference sequence is in reference.fasta, your unaligned reads are in subreads.bam, and the file to store your aligned reads is aligned_subreads.bam. 
 
 __Step 2. variantCaller__
 
@@ -63,7 +63,7 @@ Next, call variants from the aligned BAM using variantCaller.
 
      variantCaller --algorithm=quiver  -r reference.fasta --diploid --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consensus.fastq aligned_subreads.bam
 
-Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. 
+Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
 
 ##Running on the Command-Line with pbsmrtpipe
 
