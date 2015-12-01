@@ -260,7 +260,7 @@ __Parameters File__
 
 __Annotated GFF__
 
-An annotated GFF will have the same format as the default gff, but with extra info fields. These optional fields are:
+An annotated GFF will have the same format as the default GFF, but with extra info fields. These optional fields are:
 * ?
 * ?
 * ?
