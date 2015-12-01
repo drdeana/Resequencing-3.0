@@ -177,8 +177,7 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | Advanced configuration | Help | --referenceChunkOverlap REFERENCECHUNKOVERLAP | No Description (greg) |
 | Advanced configuration | Help | --autoDisableHdf5ChunkCache AUTODISABLEHDF5CHUNKCACHE | Disable the HDF5 chunk cache when the number of datasets in the cmp.h5 exceeds the given threshold (default: 500) |
 | Advanced configuration | Help | --aligner {affine,simple}, -a {affine,simple} | The pairwise alignment algorithm that will be used to produce variant calls from the consensus (Quiver only). (default: affine) |
-| Advanced configuration | Help | --refineDinucleotideRepeats | Require quiver maximum likelihood search to try one less/more repeat copy in dinucleotide repeats, which seem to be the most frequent cause of suboptimal convergence (getting trapped in local optimum) (Quiver only) (default: True)
- |
+| Advanced configuration | Help | --refineDinucleotideRepeats | Require quiver maximum likelihood search to try one less/more repeat copy in dinucleotide repeats, which seem to be the most frequent cause of suboptimal convergence (getting trapped in local optimum) (Quiver only) (default: True) |
 | Advanced configuration | Help | --noRefineDinucleotideRepeats | Disable dinucleotide refinement (default: True) |
 | Advanced configuration | Help | --fast | Cut some corners to run faster. Unsupported! (default: False) |
 | Advanced configuration | Help | --skipUnrecognizedContigs | Do not abort when told to process a reference window (via -w/--referenceWindow[s]) that has no aligned coverage. Outputs emptyish files if there are no remaining non-degenerate windows. Only intended for use by smrtpipe scatter/gather. (default: False) |
