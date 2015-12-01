@@ -152,9 +152,15 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | output filtering | Minimum Confidence | --minConfidence MINCONFIDENCE, -q MINCONFIDENCE |  The minimum confidence for a variant call to be output to variants.gff (default: 40) |
 | output filtering | Minimum Coverage | --minCoverage MINCOVERAGE, -x MINCOVERAGE | The minimum site coverage that must be achieved for variant calls and consensus to be calculated for a site. (default: 5) |
 | output filtering | Help | --noEvidenceConsensusCall {nocall,reference,lowercasereference} | The consensus base that will be output for sites with no effective coverage. (default: lowercasereference) |
+| read selection/filtering | Coverage |  --coverage COVERAGE, -X COVERAGE | A designation of the maximum coverage level to be used for analysis. Exact interpretation is algorithm-specific. (default: 100) |
+| read selection/filtering | Minimum MapQV |  --minMapQV MINMAPQV, -m MINMAPQV |  The minimum MapQV for reads that will be used for analysis. (default: 10) |
+| read selection/filtering | Reference Window |  --referenceWindow REFERENCEWINDOWSASSTRING, --referenceWindows REFERENCEWINDOWSASSTRING, -w REFERENCEWINDOW | The window (or multiple comma-delimited windows) of the reference to be processed, in the format refGroup:refStart-refEnd (default: entire reference).(default: None) |
+| read selection/filtering | Alignment Window |  --alignmentSetRefWindows | The window (or multiple comma-delimited windows) of the reference to be processed, in the format refGroup:refStart-refEnd will be pulled from the alignment file. (default: False) |
+| read selection/filtering | Reference Window File |  --referenceWindowsFile REFERENCEWINDOWSASSTRING, -W REFERENCEWINDOWSASSTRING |  A file containing reference window designations, one per line (default: None) |
+| read selection/filtering | Barcode | --barcode _BARCODE | Only process reads with the given barcode name. (default: None) |
+| read selection/filtering | Read Strata | --readStratum READSTRATUM |  A string of the form 'n/N', where n, and N are integers, 0 <= n < N, designating that the reads are to be deterministically split into N strata of roughly even size, and stratum n is to be used for variant and consensus calling. This is mostly useful for Quiver development. (default: None) |
 | optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
-| optional | Help |  -h, --help | show this help message and exit |
+
 
 ## Output Files
 ## PBAlign Output Files
