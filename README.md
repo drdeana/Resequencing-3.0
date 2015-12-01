@@ -249,8 +249,8 @@ Contig_Name   .   Variant_Type   Start_Position   End_Position   .   .   .   Inf
 The default information in the Info column is:
 * Reference Sequence
 * Alternate Sequence
-* Coverage
-* Confidence
+* Coverage (average depth?) (greg)
+* Confidence (what statistic?) (greg)
 
 __Reference Windows File__
 (greg)
