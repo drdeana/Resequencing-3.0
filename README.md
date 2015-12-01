@@ -57,7 +57,7 @@ First, align your sequences to your chosen reference.
 
 Where your reference sequence is in reference.fasta, your unaligned reads are in subreads.bam, and the file to store your aligned reads is aligned_subreads.bam.
 
-__Step 2. GenomicConsensus__
+__Step 2. variantCaller__
 
 Next, call variants from the aligned BAM using variantCaller.
 
