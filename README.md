@@ -22,7 +22,7 @@ Table of contents
 
 ## Overview
 
-![resequencing](https://cloud.githubusercontent.com/assets/12494820/11510246/9665ec1c-9817-11e5-99fb-d15e325b4351.png)
+![resequencing](https://cloud.githubusercontent.com/assets/12494820/11510701/e22e0c36-9819-11e5-839f-ca30394036a1.png)
 
 Analyses are performed in two stages: PBAlign, and variantCaller. 
 * __PBAlign__
