@@ -168,8 +168,18 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | Verbosity and debugging/profiling | Dump Evidence | --dumpEvidence [{variants,all}], -d [{variants,all}] | No Description (greg) |
 | Verbosity and debugging/profiling | Evidence Directory | --evidenceDirectory EVIDENCEDIRECTORY | No Description (greg) |
 | Verbosity and debugging/profiling | Annotate GFF | --annotateGFF | Augment GFF variant records with additional information (default: False) |
-| optional | Help |  -h, --help | show this help message and exit |
-
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
+| Advanced configuration | Help |  -h, --help | show this help message and exit |
 
 ## Output Files
 ## PBAlign Output Files
