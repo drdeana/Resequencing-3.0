@@ -38,11 +38,11 @@ only be blasr and QVs will be loaded automatically.
 ##Manual
 There are three ways to run Resequencing: Using SMRTLink, on the command line, and on the command line using pbsmrtpipe so that you can run the whole Resequencing analysis with one command given to pbsmrtpipe. 
 
-##Running with SMRTLink
+###Running with SMRTLink
 
 To run Isoseq using SMRTLink, follow the usual steps for analysing data on SMRTLink. TODO: Link to document explaining SMRTLink.
 
-##Running on the Command Line
+###Running on the Command Line
 
 On the command line, the analysis is performed in 2 steps:
 
@@ -77,9 +77,9 @@ Where `variants.gff` contain your variant callset.
 
 Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
 
-##Running on the Command-Line with pbsmrtpipe
+###Running on the Command-Line with pbsmrtpipe
 
-###Install pbsmrtpipe
+####Install pbsmrtpipe
 pbsmrtpipe is a part of `smrtanalysis-3.0` package and will be installed
 if `smrtanalysis-3.0` has been installed on your system. Or you can [download   pbsmrtpipe](https://github.com/PacificBiosciences/pbsmrtpipe) and [install](http://pbsmrtpipe.readthedocs.org/en/master/).
     
@@ -87,7 +87,7 @@ You can verify that pbsmrtpipe is running OK by:
 
     pbsmrtpipe --help
 
-### Create a dataset
+#### Create a dataset
 Now create an XML file from your subreads.
 
 ```
@@ -96,7 +96,7 @@ dataset create --type SubreadSet my.subreadset.xml subreads1.bam subreads2.bam .
 This will create a file called `my.subreadset.xml`. 
 
 
-### Create and edit resequencing options and global options for `pbsmrtpipe`.
+#### Create and edit resequencing options and global options for `pbsmrtpipe`.
 Create a global options XML file which contains SGE related, job chunking and
 job distribution options that you may modify by:
 
@@ -120,7 +120,7 @@ The entries in the options XML files have the format:
 
 And you can modify options using your favorite text editor, such as vim.
 
-### Run Resequencing from pbsmrtpipe
+#### Run Resequencing from pbsmrtpipe
 Once you have set your options, you are ready to run resequencing via pbsmrtpipe:
 
 ```
@@ -129,7 +129,7 @@ pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_subread:m
 
 ## Advanced Analysis Options
 
-## SMRTLink/pbsmrtpipe Resequencing Options
+### SMRTLink/pbsmrtpipe Resequencing Options
 
 You may modify advanced analysis parameters for Resequencing as described below via SMRTLink.
 
@@ -148,7 +148,7 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | GenomicConsenus | Min. length  | 50  | Minimum required alignment length |
 
 
-## PBAlign Options
+### PBAlign Options
 
 | Type  |  Parameter          |     Example      |  Explanation      |
 | ----- | ------------------ | ---------------- | ----------------- |
@@ -184,7 +184,7 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | miscellaneous | Seed | --seed SEED | Initialize the random number generator with a none-zero integer. Zero means that current system time is used. Default value is 1. |
 | miscellaneous | Temporary Directory | --tmpDir TMPDIR | Specify a directory for saving temporary files. Default is /scratch. |
 
-## variantCaller Options
+### variantCaller Options
 In order to show variantCaller advanced options via command line: `variantCaller --help`.
 
 | Type  |  Parameter          |     Example      |  Explanation      |
@@ -233,7 +233,7 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | Advanced configuration | Skip Unrecognized Contigs | --skipUnrecognizedContigs | Do not abort when told to process a reference window (via -w/--referenceWindow[s]) that has no aligned coverage. Outputs emptyish files if there are no remaining non-degenerate windows. Only intended for use by smrtpipe scatter/gather. (default: False) |
 
 ##Files
-## PBAlign Files
+### PBAlign Files
 
 __Unaligned Reads File (subreads.bam)__
 
@@ -259,7 +259,7 @@ __AlignmentSeq File__
 __Region Table?__
 (greg)
 
-##variantCaller Files
+###variantCaller Files
 
 __Consensus Sequences File (consensus.fastq/consensus.fastq.gz)__
 
