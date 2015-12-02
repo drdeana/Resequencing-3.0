@@ -55,7 +55,11 @@ First, align your sequences to your chosen reference.
 
      pbalign --concordant --hitPolicy=randombest --minAccuracy 70 --minLength 50 --algorithmOptions="-minMatch 12 -bestn 10 -minPctIdentity 70.0" subreads.bam reference.fasta aligned_subreads.bam
 
-Where your reference sequence is in reference.fasta, your unaligned reads are in subreads.bam, and the file to store your aligned reads is aligned_subreads.bam. 
+Where `reference.fasta` contains your reference sequences.
+
+Where `subreads.bam` contains your unaligned reads.
+
+Where `aligned_subreads.bam` is where your aligned reads will be stored. 
 
 __Step 2. variantCaller__
 
@@ -63,7 +67,15 @@ Next, call variants from the aligned BAM using variantCaller.
 
      variantCaller --algorithm=quiver  -r reference.fasta --diploid --minConfidence=40 --minCoverage=5 -o variants.gff -o consensus.fasta.gz -o consensus.fastq aligned_subreads.bam
 
-Where your reference sequence is in reference.fasta, your aligned reads are in aligned_subreads.bam, the variant callset will be stored in variants.gff, and the consensus sequences are stored in consensus.fastq and consensus.fastq.gz. Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
+Where `reference.fasta` contains your reference sequences.
+
+Where `aligned_subreads.bam` contains your aligned reads.
+
+Where `consensus.fastq` contains your consensus sequences.
+
+Where `variants.gff` contain your variant callset. 
+
+Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
 
 ##Running on the Command-Line with pbsmrtpipe
 
@@ -114,7 +126,6 @@ Once you have set your options, you are ready to run resequencing via pbsmrtpipe
 ```
 pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_subread:my.subreadset.xml --preset-xml=isoseq_options.xml --preset-xml=global_options.xml
 ```
-
 
 ## Advanced Analysis Options
 
