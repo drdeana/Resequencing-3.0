@@ -261,6 +261,10 @@ __Region Table?__
 
 ##variantCaller Files
 
+__Consensus sequences (consensus.fastq/consensus.fastq.gz)__
+
+This file contains the consensus sequences generated from your aligned reads and reference sequences. 
+
 __Variant Callset (variants.gff)__
 
 The variant callset will follow standard gff format with a header and the columns:
@@ -275,18 +279,20 @@ The default information in the Info column is:
 * Coverage (average depth?) (greg)
 * Confidence (what statistic?) (greg)
 
+__Annotated GFF (variants.gff)__
+
+An annotated GFF will have the same format as the default GFF, but with extra info fields. These optional fields are:
+* Rows (what is this?)
+* anything else?
+* (greg)
+
 __Reference Windows File__
 (greg)
 
 __Parameters File__
 (greg)
 
-__Annotated GFF__
 
-An annotated GFF will have the same format as the default GFF, but with extra info fields. These optional fields are:
-* Rows (what is this?)
-* anything else?
-* (greg)
 
 ## Algorithm Modules
 
