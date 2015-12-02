@@ -75,7 +75,9 @@ Where `consensus.fastq` contains your consensus sequences.
 
 Where `variants.gff` contain your variant callset. 
 
-Note that you will need to have an index file for your reference.fasta. To index, use `samtools faidx reference.fasta`.
+**Note** You will need to have an index file for your reference.fasta. 
+
+To index, use `samtools faidx reference.fasta`.
 
 ###Running on the Command-Line with pbsmrtpipe
 
