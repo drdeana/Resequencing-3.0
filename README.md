@@ -261,9 +261,8 @@ __Parameters File__
 __Annotated GFF__
 
 An annotated GFF will have the same format as the default GFF, but with extra info fields. These optional fields are:
-* ?
-* ?
-* ?
+* Rows (what is this?)
+* anything else?
 * (greg)
 
 ## Algorithm Modules
