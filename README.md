@@ -235,6 +235,18 @@ In order to show variantCaller advanced options via command line: `variantCaller
 ##Files
 ## PBAlign Files
 
+__Unaligned Reads File (subreads.bam)__
+
+This file contains your input reads. It can be a BAM, FASTA, or XML file. 
+
+__Aligned Reads File (aligned_subreads.bam)__
+
+This file contains your aligned output reads. It can be (formats?) (greg)
+
+__Reference File (reference.fasta)__
+
+This file contains the reference sequences that your input reads will be aligned against. 
+
 __Configuration File__
 (greg)
 
