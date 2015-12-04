@@ -71,9 +71,9 @@ Where `reference.fasta` contains your reference sequences.
 
 Where `aligned_subreads.bam` contains your aligned reads.
 
-Where `consensus.fastq` contains your consensus sequences.
+Where `consensus.fastq` the filename to output your consensus sequences in fasta format
 
-Where `variants.gff` contain your variant callset. 
+Where `variants.gff` contains your variant callset output
 
 **Note:** You will need to have an index file for your `reference.fasta`. 
 
@@ -238,7 +238,7 @@ In order to show variantCaller advanced options via command line: `variantCaller
 ### PBAlign Files
 #### Inputs
 
-__Unaligned Reads File (subreads.*)__
+__Unaligned Reads File (subreads.\*)__
 
 (Required) This file contains your input reads. It can be a BAM, FASTA, XML, CCS.H5 or BAS.H5 file.
 
@@ -280,7 +280,7 @@ Example config text file:
 
 __Pulse File__
 
-(Optional) Path to *.bas.h5 or *.pls.h5 when input type is *.fasta, and output type is *.cmp.h5. This is necessary to load pulse metrics into the alignment file (*.cmp.h5) for subsequent consumption by `variantCaller`
+(Optional) Path to \*.bas.h5 or \*.pls.h5 when input type is \*.fasta, and output type is \*.cmp.h5. This is necessary to load pulse metrics into the alignment file (\*.cmp.h5) for subsequent consumption by `variantCaller`.
 
 __AlignmentSeq File__
 
@@ -288,27 +288,36 @@ I don't know what this is Ben, Where did you see this? (greg)
 
 __Region Table?__
 
-(Optional) path to *.rgn.h5. When input file is of type *.bas.h5, you may supply an optional Region table (*.rgn.h5) to filter the reads prior to alignment
+(Optional) path to \*.rgn.h5. When input file is of type \*.bas.h5, you may supply an optional Region table (\*.rgn.h5) to filter the reads prior to alignment
 
 ####Outputs
 
-__Aligned Reads File (aligned_subreads.*)__
+__Aligned Reads File (aligned_subreads.\*)__
 
-This file contains your aligned output reads. You can specify *.cmp.h5, *.sam or *.bam
-Note: *.bam output format only works if `--algorthim blasr`
+This file contains your aligned output reads. You can specify \*.cmp.h5, \*.sam or \*.bam
+Note: \*.bam output format only works if `--algorthim blasr`
 
 ###variantCaller Files
 ####Inputs
 
 __Aligned Subreads__
 
-Input file of aligned sequences supplied in either *.bam or *.cmp.h5 format
+Input file of aligned sequences supplied in either \*.bam or \*.cmp.h5 format
+
+__Reference Windows File__
+(greg)
+
+__Parameters File__
+
+(optional) Path to QuiverParameters.ini file for chemistry specific consensus calling parameters.
+
+This file is packaged with GenomicConsensus and can be found in `GenomicConsensus/quiver/resources/*/GenomicConsensus/QuiverParameters.ini`
 
 ####Outputs
 
 __Consensus Sequences File (consensus.fastq/consensus.fastq.gz)__
 
-This file contains the consensus sequences generated from your aligned reads and reference sequences. 
+This file contains the consensus sequences generated from your aligned reads and reference sequences.
 
 __Variant Callset File (variants.gff)__
 
@@ -323,11 +332,14 @@ Contig_Name   .   Variant_Type   Start_Position   End_Position   .   .   .   Inf
 ```
 
 The default information in the Info column is:
+
 * Reference Sequence
 
 The reference base or bases for the variant site. May be . to represent a zero-length substring (for insertion events)
 
 * Alternate Sequence
+
+The read base or bases corresponding to the variant. . encodes a zero-length string, as for a deletion.
 
 * Coverage
 
@@ -337,13 +349,6 @@ Read coverage at particular variant site
 
 The phred-scaled probability that the variant is real, rounded to the nearest integer and truncated at 93
 
-__Reference Windows File__
-(greg)
-
-__Parameters File__
-
-(optional) Path to QuiverParameters.ini file for chemistry specific consensus calling parameters.
-This file is packaged with GenomicConsensus and can be found in GenomicConsensus/quiver/resources/*/GenomicConsensus/QuiverParameters.ini
 
 ## Algorithm Modules
 
