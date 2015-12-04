@@ -59,7 +59,7 @@ Where `reference.fasta` contains your reference sequences.
 
 Where `subreads.bam` contains your unaligned reads.
 
-Where `aligned_subreads.bam` is where your aligned reads will be stored. 
+Where `aligned_subreads.bam` is where your aligned reads will be output.
 
 __Step 2. variantCaller__
 
@@ -159,7 +159,7 @@ You may modify advanced analysis parameters for Resequencing as described below 
 | positional | Output File |  aligned.bam | Output AlignmentSet file |
 | optional | Help | -h, --help | show this help message and exit |
 | optional | Version | -v, --version | show program's version number and exit |
-| optional | Verbose | --verbose | No Description (greg) |
+| optional | Verbose | --verbose | Turn on verbose logging output |
 | optional | Debug | --debug | Writes the debug reporting to stdout |
 | optional | Profile | --profile | Print runtime profile at exit |
 | optional input | Region Table | --regionTable REGIONTABLE | Specify a region table for filtering reads. |
@@ -211,14 +211,14 @@ In order to show variantCaller advanced options via command line: `variantCaller
 | read selection and filtering | Reference Window File |  --referenceWindowsFile REFERENCEWINDOWSASSTRING, -W REFERENCEWINDOWSASSTRING |  A file containing reference window designations, one per line (default: None) |
 | read selection and filtering | Barcode | --barcode _BARCODE | Only process reads with the given barcode name. (default: None) |
 | read selection and filtering | Read Strata | --readStratum READSTRATUM |  A string of the form 'n/N', where n, and N are integers, 0 <= n < N, designating that the reads are to be deterministically split into N strata of roughly even size, and stratum n is to be used for variant and consensus calling. This is mostly useful for Quiver development. (default: None) |
-| algorithm and parameter settings | Algorithm |  --algorithm ALGORITHM | No Description (greg) |
+| algorithm and parameter settings | Algorithm |  --algorithm ALGORITHM | Specify variant calling algorithm {plurality; quiver; arrow} |
 | algorithm and parameter settings | Quiver Parameter File | --parametersFile PARAMETERSFILE, -P PARAMETERSFILE |  Parameter set filename (QuiverParameters.ini), or directory D such that either  D/*/GenomicConsensus/QuiverParameters.ini, or D/GenomicConsensus/QuiverParameters.ini, is found. In the former case, the lexically largest path is chosen. (default: None) |
 | algorithm and parameter settings | Parameter Specs | --parametersSpec PARAMETERSSPEC, -p PARAMETERSSPEC | Name of parameter set (chemistry.model) to select from the parameters file, or just the name of the chemistry, in which case the best available model is chosen. Default is 'auto', which selects the best parameter set from the cmp.h5 (default: auto) |
-| Verbosity and debugging and profiling | Verbosity Level | --verbose | Set the verbosity level. (default: None) (greg) (what are the other levels?)|
+| Verbosity and debugging and profiling | Verbosity Level | --verbose | Increase verbosity level of output for each additional occurence of the flag. None: Log only errors, Once: Log warnings and errors, Twice: Log all everything |
 | Verbosity and debugging and profiling | Quiet | --quiet | Turn off all logging, including warnings (default:False) |
 | Verbosity and debugging and profiling | Profile | --profile | Enable Python-level profiling (using cProfile).(default: False) |
-| Verbosity and debugging and profiling | Dump Evidence | --dumpEvidence [{variants,all}], -d [{variants,all}] | No Description (greg) |
-| Verbosity and debugging and profiling | Evidence Directory | --evidenceDirectory EVIDENCEDIRECTORY | No Description (greg) |
+| Verbosity and debugging and profiling | Dump Evidence | --dumpEvidence [{variants,all}], -d [{variants,all}] | Dump fasta and H5 files used to infer consensus calls for each window that variantCaller operates on |
+| Verbosity and debugging and profiling | Evidence Directory | --evidenceDirectory EVIDENCEDIRECTORY | Directory to dump fasta and H5 data files to. Default:evidence_dump |
 | Verbosity and debugging and profiling | Annotate GFF | --annotateGFF | Augment GFF variant records with additional information (default: False) |
 | Advanced configuration | Diploid | diploid | Enable detection of heterozygous variants (experimental) (default: False) |
 | Advanced configuration | Queue Size | --queueSize QUEUESIZE, -Q QUEUESIZE | No Description (greg) |
@@ -236,38 +236,85 @@ In order to show variantCaller advanced options via command line: `variantCaller
 
 ##Files
 ### PBAlign Files
+#### Inputs
 
-__Unaligned Reads File (subreads.bam)__
+__Unaligned Reads File (subreads.*)__
 
-This file contains your input reads. It can be a BAM, FASTA, or XML file. 
-
-__Aligned Reads File (aligned_subreads.bam)__
-
-This file contains your aligned output reads. It can be (formats?) (greg)
+(Required) This file contains your input reads. It can be a BAM, FASTA, XML, CCS.H5 or BAS.H5 file.
 
 __Reference File(reference.fasta)__
 
-This file contains the reference sequences that your input reads will be aligned against. 
+(Required) This file contains the reference sequences that your input reads will be aligned against.
 
 __Configuration File__
-(greg)
+
+(Optional) If you prefer to specify all arguments in a config file rather than on the command line, use the `--configFile` argument.
+
+Example config text file:
+```
+# This is a config file for pbalign where users can specify
+# values for an arbitary subset of optional arguments for pbalign.
+# Lines which start with '#' are comments. Otherwise each line
+# should specify the value for exactly one optinal argument.
+# Note that:
+#   [1] Positional arguments, including inputFileName, outputFileName,
+#       and referencePath, can not be specified in a config file.
+#   [2] Sepcial arguments, including --verbose, --version (-v..),
+#       --debug and --profile, in a config file will be ignored.
+#   [3] Arguments specified in a config file will be overwritten
+#       by arguments on command-line.
+
+# Aligner's options.
+--maxHits       = 20
+--minAnchorSize = 1
+--minLength     = 100
+--algorithmOptions = "-noSplitSubreads -maxMatch 30 -nCandidates 30"
+
+# SamFilter's filtering criteria and hit policy.
+--hitPolicy     = randombest
+--maxDivergence = 40
+
+# Miscellaneous
+--seed = 10
+```
 
 __Pulse File__
-(greg)
+
+(Optional) Path to *.bas.h5 or *.pls.h5 when input type is *.fasta, and output type is *.cmp.h5. This is necessary to load pulse metrics into the alignment file (*.cmp.h5) for subsequent consumption by `variantCaller`
 
 __AlignmentSeq File__
-(greg)
+
+I don't know what this is Ben, Where did you see this? (greg)
 
 __Region Table?__
-(greg)
+
+(Optional) path to *.rgn.h5. When input file is of type *.bas.h5, you may supply an optional Region table (*.rgn.h5) to filter the reads prior to alignment
+
+####Outputs
+
+__Aligned Reads File (aligned_subreads.*)__
+
+This file contains your aligned output reads. You can specify *.cmp.h5, *.sam or *.bam
+Note: *.bam output format only works if `--algorthim blasr`
 
 ###variantCaller Files
+####Inputs
+
+__Aligned Subreads__
+
+Input file of aligned sequences supplied in either *.bam or *.cmp.h5 format
+
+####Outputs
 
 __Consensus Sequences File (consensus.fastq/consensus.fastq.gz)__
 
 This file contains the consensus sequences generated from your aligned reads and reference sequences. 
 
 __Variant Callset File (variants.gff)__
+
+See the detailed format specification [here](https://github.com/PacificBiosciences/GenomicConsensus/blob/master/doc/VariantsGffSpecification.rst)
+
+In brief:
 
 The variant callset will follow standard gff format with a header and the columns:
 
@@ -277,24 +324,26 @@ Contig_Name   .   Variant_Type   Start_Position   End_Position   .   .   .   Inf
 
 The default information in the Info column is:
 * Reference Sequence
+
+The reference base or bases for the variant site. May be . to represent a zero-length substring (for insertion events)
+
 * Alternate Sequence
-* Coverage (average depth?) (greg)
-* Confidence (what statistic?) (greg)
 
-__Annotated Callset File (variants.gff)__
+* Coverage
 
-An annotated GFF will have the same format as the default GFF, but with extra info fields. These optional fields are:
-* Rows (what is this?)
-* anything else?
-* (greg)
+Read coverage at particular variant site
+
+* Confidence
+
+The phred-scaled probability that the variant is real, rounded to the nearest integer and truncated at 93
 
 __Reference Windows File__
 (greg)
 
 __Parameters File__
-(greg)
 
-
+(optional) Path to QuiverParameters.ini file for chemistry specific consensus calling parameters.
+This file is packaged with GenomicConsensus and can be found in GenomicConsensus/quiver/resources/*/GenomicConsensus/QuiverParameters.ini
 
 ## Algorithm Modules
 
