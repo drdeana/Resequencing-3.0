@@ -135,19 +135,19 @@ pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_ref_datas
 
 You may modify advanced analysis parameters for Resequencing as described below via SMRTLink.
 
-| Module |           Parameter           |     Default      |  Explanation      |
+| Module |           Parameter (pbsmrtpipe_name)          |     Default      |  Explanation      |
 | ------ | -------------------------- | --------------------------- | ----------------- |
-| variantCaller | Algorithm Name  | quiver  | Specifies the algorithm to be used by GenomicConsenus. Options are "quiver" and "plurality" |
-| variantCaller | Diploid mode (experimental)  | unchecked  | Enable detection of heterozygous variants (experimental) |
-| variantCaller | Minimum confidence  | 40  | The minimum confidence for a variant call to be output to variants.gff |
-| variantCaller | Minimum coverage  | 5  | The minimum site coverage that must be achieved for variant calls and consensus to be calculated for a site. |
-| PBAlign | Algorithm options  | -minMatch 12 -bestn 10 -minPctIdentity 70.0  | List of space-separated arguments passed to BLASR |
-| PBAlign | Concordant alignment  | checked  | Map subreads of a ZMW to the same genomic location |
-| PBAlign | Consolidate .bam  | unchecked  | Merge chunked/gathered .bam files |
-| PBAlign | Number of .bam files  | 1  | Number of .bam files to create in consolidate mode |
-| variantCaller | Hit policy  | 40  | Specify a policy for how to treat multiple hit random : selects a random hit. all : selects all hits. allbest : selects all the best score hits. randombest: selects a random hit from all best score hits. leftmost : selects a hit which has the best score and the smallest mapping coordinate in any reference. Default value is randombest. |
-| variantCaller | Min. accuracy  | 70  | Minimum required alignment accuracy (percent) |
-| variantCaller | Min. length  | 50  | Minimum required alignment length |
+| variantCaller | Algorithm Name (algorithm) | quiver  | Specifies the algorithm to be used by GenomicConsenus. Options are "quiver" and "plurality" |
+| variantCaller | Diploid mode (diploid)  | unchecked  | Enable detection of heterozygous variants (experimental) |
+| variantCaller | Minimum confidence (min_confidence) | 40  | The minimum confidence for a variant call to be output to variants.gff |
+| variantCaller | Minimum coverage (min_coverage) | 5  | The minimum site coverage that must be achieved for variant calls and consensus to be calculated for a site. |
+| PBAlign | Algorithm options (algorithm_options) | -minMatch 12 -bestn 10 -minPctIdentity 70.0  | List of space-separated arguments passed to BLASR |
+| PBAlign | Concordant alignment (concordant) | checked  | Map subreads of a ZMW to the same genomic location |
+| PBAlign | Consolidate .bam (consolidate_aligned_bam) | unchecked  | Merge chunked/gathered .bam files |
+| PBAlign | Number of .bam files (consolidate_n_files) | 1  | Number of .bam files to create in consolidate mode |
+| variantCaller | Hit policy (hit_policy) | 40  | Specify a policy for how to treat multiple hit random : selects a random hit. all : selects all hits. allbest : selects all the best score hits. randombest: selects a random hit from all best score hits. leftmost : selects a hit which has the best score and the smallest mapping coordinate in any reference. Default value is randombest. |
+| variantCaller | Min. accuracy (min_accuracy)  | 70  | Minimum required alignment accuracy (percent) |
+| variantCaller | Min. length (min_length) | 50  | Minimum required alignment length |
 
 
 ### PBAlign Options
