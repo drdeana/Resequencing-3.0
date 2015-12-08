@@ -126,7 +126,7 @@ And you can modify options using your favorite text editor, such as vim.
 Once you have set your options, you are ready to run resequencing via pbsmrtpipe:
 
 ```
-pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_ref_dataset:reference.fasta -e eid_subread:my.subreadset.xml --preset-xml=isoseq_options.xml --preset-xml=global_options.xml
+pbsmrtpipe pipeline-id pbsmrtpipe.pipelines.sa3_ds_resequencing -e eid_ref_dataset:reference.fasta -e eid_subread:my.subreadset.xml --preset-xml=resequencing_options.xml --preset-xml=global_options.xml
 ```
 
 ## Advanced Analysis Options
