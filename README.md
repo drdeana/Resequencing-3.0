@@ -109,7 +109,7 @@ job distribution options that you may modify by:
 Create a resequencing options XML file which contains resequencing-related options that 
 you may modify by:
 ```
- pbsmrtpipe show-template-details pbsmrtpipe.pipelines.sa3_ds_resequencing -o isoseq_options.xml
+ pbsmrtpipe show-template-details pbsmrtpipe.pipelines.sa3_ds_resequencing -o resequencing_options.xml
 ```
 
 The entries in the options XML files have the format:
