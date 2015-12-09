@@ -286,7 +286,7 @@ __AlignmentSeq File__
 
 I don't know what this is Ben, Where did you see this? (greg)
 
-__Region Table?__
+__Region Table__
 
 (Optional) path to \*.rgn.h5. When input file is of type \*.bas.h5, you may supply an optional Region table (\*.rgn.h5) to filter the reads prior to alignment
 
