@@ -362,7 +362,7 @@ GenomicConsensus is a library of code for performing alignment-guided _de novo_ 
   * (greg)
 * __Confidence (variant call)__
   * A PHRED-scaled value indicating the likelihood the variant was called in error.
-* __Dinucleotide repeat (how many repeats before it's a repeat, should this be defined?)__
+* __Dinucleotide repeat__
   * A repetitive region containing 3 or more consecutive dinucleotide elements of the same structure, e.g. "AGAGAGAG". 
 * __MapQV__
   * (greg)
