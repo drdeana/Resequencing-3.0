@@ -40,7 +40,7 @@ There are three ways to run Resequencing: Using SMRT Link, on the command line, 
 
 ###Running with SMRT Link
 
-To run Isoseq using SMRT Link, follow the usual steps for analysing data on SMRT Link. TODO: Link to document explaining SMRT Link.
+To run Iso-Seq™ Analysis using SMRT Link, follow the usual steps for analysing data on SMRT Link. TODO: Link to document explaining SMRT Link.
 
 ###Running on the Command Line
 
